@@ -15,9 +15,12 @@ public class ClosestPairs {
 
         Scanner in = new Scanner(System.in);
 
-        int n = in.nextInt();
-        while (n != 0) {
-            ArrayList<Point> points = new ArrayList<>();
+        while (true) {
+            int n = in.nextInt();
+            if (n == 0) {
+                break;
+            }
+            ArrayList<Point> points = new ArrayList<>(n);
             for (int i = 0; i < n; i++) {
                 int x = in.nextInt();
                 int y = in.nextInt();
@@ -40,7 +43,11 @@ public class ClosestPairs {
             });
             pointsSortedByY = pointsSortedY;
             double minDistance = closestPair(points, 0, points.size() - 1);
-            System.out.println(minDistance);
+            if (minDistance < 10000) {
+                System.out.println(minDistance);
+            } else {
+                System.out.println("INFINITY");
+            }
         }
     }
 
