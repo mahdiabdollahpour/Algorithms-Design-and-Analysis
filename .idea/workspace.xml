@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f7c9304-c2a5-4435-8229-9f34b1bbd818" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IthOrderStatisticRandomized.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TopologicalSort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/alog1projects/ClosestPairs$1.class" afterPath="$PROJECT_DIR$/out/production/alog1projects/ClosestPairs$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/alog1projects/ClosestPairs$2.class" afterPath="$PROJECT_DIR$/out/production/alog1projects/ClosestPairs$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/alog1projects/ClosestPairs.class" afterPath="$PROJECT_DIR$/out/production/alog1projects/ClosestPairs.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClosestPairs.java" afterPath="$PROJECT_DIR$/src/ClosestPairs.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -721,12 +715,12 @@
       <updated>1505977828731</updated>
       <workItem from="1505977832230" duration="1322000" />
       <workItem from="1505979170164" duration="16475000" />
-      <workItem from="1506063347605" duration="2308000" />
+      <workItem from="1506063347605" duration="2536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20105000" />
+    <option name="totallyTimeSpent" value="20333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -738,8 +732,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="1934" height="1030" extended-state="0" />
-    <editor active="true" />
+    <frame x="-10" y="0" width="1934" height="1030" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -753,7 +747,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34258142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81785285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.81785285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26275787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
