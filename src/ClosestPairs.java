@@ -1,6 +1,7 @@
 import org.omg.CORBA.MARSHAL;
 
 import java.awt.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -43,7 +44,10 @@ public class ClosestPairs {
             });
             pointsSortedByY = pointsSortedY;
             double minDistance = closestPair(points, 0, points.size() - 1);
+
             if (minDistance < 10000) {
+                DecimalFormat df = new DecimalFormat("0.0000");
+                minDistance = Double.parseDouble(df.format(minDistance));
                 System.out.println(minDistance);
             } else {
                 System.out.println("INFINITY");
