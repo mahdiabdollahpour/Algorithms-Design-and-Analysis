@@ -1,3 +1,5 @@
+package algo1;
+
 import org.omg.CORBA.MARSHAL;
 
 import java.awt.*;

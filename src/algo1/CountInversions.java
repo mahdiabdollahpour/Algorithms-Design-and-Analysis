@@ -1,3 +1,5 @@
+package algo1;
+
 import java.math.BigInteger;
 import java.util.Scanner;
 

@@ -1,3 +1,5 @@
+package algo1;
+
 import java.io.*;
 import java.util.HashSet;
 import java.util.Scanner;

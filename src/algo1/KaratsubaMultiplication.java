@@ -1,3 +1,5 @@
+package algo1;
+
 import java.util.Map;
 import java.util.Scanner;
 
