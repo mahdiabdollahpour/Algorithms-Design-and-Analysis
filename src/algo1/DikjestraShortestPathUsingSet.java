@@ -73,7 +73,7 @@ public class DikjestraShortestPathUsingSet {
         Node node = iterator.next();
 //        int mindestination = node.distance;
 //        while (iterator.hasNext()) {
-//            algo1.Node now = iterator.next();
+//            algo1.node now = iterator.next();
 //            if (mindestination > now.distance) {
 //                node = now;
 //                mindestination = node.distance;
@@ -98,13 +98,13 @@ public class DikjestraShortestPathUsingSet {
             distances[i] = -1;
             marked[i] = false;
         }
-        //  Queue<algo1.Node> q = new PriorityQueue<>(new algo1.Node());
-        //    Queue<algo1.Node> q = new PriorityQueue<>(new algo1.Node());
+        //  Queue<algo1.node> q = new PriorityQueue<>(new algo1.node());
+        //    Queue<algo1.node> q = new PriorityQueue<>(new algo1.node());
         HashSet<Node> q = new HashSet<>();
 
 //                new PriorityQueue((o1, o2) -> {
-//            algo1.Node n1 = (algo1.Node) o1;
-//            algo1.Node n2 = (algo1.Node) o2;
+//            algo1.node n1 = (algo1.node) o1;
+//            algo1.node n2 = (algo1.node) o2;
 //            return new Integer(n2.distance).compareTo(new Integer(n1.distance));
 //        });
         q.add(new Node(0, 0));

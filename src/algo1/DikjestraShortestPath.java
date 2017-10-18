@@ -77,13 +77,13 @@ public class DikjestraShortestPath {
             distances[i] = -1;
             marked[i] = false;
         }
-        //  Queue<algo1.Node> q = new PriorityQueue<>(new algo1.Node());
+        //  Queue<algo1.node> q = new PriorityQueue<>(new algo1.node());
           Queue<Node> q = new PriorityQueue<>(new Node());
-   //     HashSet<algo1.Node> q = new HashSet<>();
+   //     HashSet<algo1.node> q = new HashSet<>();
 
 //                new PriorityQueue((o1, o2) -> {
-//            algo1.Node n1 = (algo1.Node) o1;
-//            algo1.Node n2 = (algo1.Node) o2;
+//            algo1.node n1 = (algo1.node) o1;
+//            algo1.node n2 = (algo1.node) o2;
 //            return new Integer(n2.distance).compareTo(new Integer(n1.distance));
 //        });
         q.add(new Node(0, 0));
