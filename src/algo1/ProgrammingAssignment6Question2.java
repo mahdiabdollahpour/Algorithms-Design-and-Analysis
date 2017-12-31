@@ -12,7 +12,7 @@ public class ProgrammingAssignment6Question2 {
     }
 
     static ArrayList<Integer> numbers = new ArrayList<>(10000);
-    public static BinarySearchTree bst = new BinarySearchTree();
+    //public static BinarySearchTree bst = new BinarySearchTree();
 
     public static void main(String[] args) {
         int k = 1;

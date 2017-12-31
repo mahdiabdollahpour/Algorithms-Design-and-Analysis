@@ -22,16 +22,16 @@ public class test {
 //        System.out.println(a);
 //        System.out.println(Long.parseLong("68037543430"));
 //    }
-
-    public static void main(String[] args) {
-        BinarySearchTree bst = new BinarySearchTree();
-        System.out.println(bst.add(1));
-        System.out.println(bst.add(2));
-        System.out.println(bst.add(3));
-        System.out.println(bst.add(4));
-        System.out.println(bst.add(5));
-        System.out.println(bst.ithOrder(3));
-        //    System.out.println(bst.median());
-    }
+//
+//    public static void main(String[] args) {
+//        BinarySearchTree bst = new BinarySearchTree();
+//        System.out.println(bst.add(1));
+//        System.out.println(bst.add(2));
+//        System.out.println(bst.add(3));
+//        System.out.println(bst.add(4));
+//        System.out.println(bst.add(5));
+//        System.out.println(bst.ithOrder(3));
+//        //    System.out.println(bst.median());
+//    }
 
 }
