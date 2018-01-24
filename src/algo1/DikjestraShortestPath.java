@@ -1,5 +1,9 @@
 package algo1;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -17,7 +21,7 @@ public class DikjestraShortestPath {
 
     }
 
-    static class Node implements Comparator<Node> {
+    static class Node implements Comparable<Node> {
         int distance;
         int source;
 
@@ -29,41 +33,85 @@ public class DikjestraShortestPath {
             this.source = source;
         }
 
-        @Override
-        public int compare(Node node1, Node node2) {
-            if (node1.distance < node2.distance)
-                return -1;
-            if (node1.distance > node2.distance)
-                return 1;
-            return 0;
-        }
 
+        @Override
+        public int compareTo(Node o) {
+            if (distance < o.distance) {
+                return 1;
+            } else if (distance > o.distance) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int m = in.nextInt();
-        ArrayList<Edge>[] graph = new ArrayList[n];
+        int n = 200;
+        //  int m = 0;
+        ArrayList[] graph = new ArrayList[n];
         for (int i = 0; i < n; i++) {
             graph[i] = new ArrayList<>();
         }
-        for (int i = 0; i < m; i++) {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader("dijkstraData.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
-            int a = in.nextInt();
-            int b = in.nextInt();
-            int w = in.nextInt();
-            graph[a - 1].add(new Edge(b - 1, w));
-        }
-        int[] distances = dijkstra(graph, n);
-        for (int i = 1; i < n; i++) {
-            if (distances[i] == -1) {
-                System.out.print("1000000000");
-            } else {
-                System.out.print(distances[i]);
+        String line, str;
+        StringTokenizer st1, st2;
+        try {
+            while ((line = br.readLine()) != null) {
+                st1 = new StringTokenizer(line);
+                int i = Integer.parseInt(st1.nextToken());
+                while (st1.hasMoreTokens()) {
+                    str = st1.nextToken();
+                    st2 = new StringTokenizer(str, ",");
+                    int v = Integer.parseInt(st2.nextToken());
+                    int d = Integer.parseInt(st2.nextToken());
+                    graph[i - 1].add(new Edge(v - 1, d));
+                }
             }
-            System.out.print(" ");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+//        for (int i = 0; i < 200; i++) {
+//
+//            //  int a = in.nextInt();
+//            String s = in.nextLine();
+//            String[] splited = s.split(",");
+//            for (int i1 = 0; i1 < splited.length; i1 += 2) {
+//
+//                int b = Integer.parseInt(splited[i1]);
+//                int w = Integer.parseInt(splited[i1 + 1]);
+//                graph[(i + 1) - 1].add(new Edge(b - 1, w));
+//            }
+//        }
+        int[] distances = dijkstra(graph, n);
+//        for (int i = 1; i < n; i++) {
+//            if (distances[i] == -1) {
+//                System.out.print("1000000000");
+//            } else {
+//                System.out.print(distances[i]);
+//            }
+//            System.out.println();
+//         //   System.out.print(" ");
+//        }
+        System.out.println(distances[7 - 1]);
+        System.out.println(distances[37 - 1]);
+        System.out.println(distances[59 - 1]);
+        System.out.println(distances[82 - 1]);
+        System.out.println(distances[99 - 1]);
+        System.out.println(distances[115 - 1]);
+        System.out.println(distances[133 - 1]);
+        System.out.println(distances[165 - 1]);
+        System.out.println(distances[188 - 1]);
+        System.out.println(distances[197 - 1]);
+        // 7,37,59,82,99,115,133,165,188,197
 
 
     }
@@ -74,38 +122,30 @@ public class DikjestraShortestPath {
         boolean[] marked = new boolean[n];
         marked[0] = false;
         for (int i = 1; i < n; i++) {
-            distances[i] = -1;
+            distances[i] = 1000000;
             marked[i] = false;
         }
-        //  Queue<algo1.node> q = new PriorityQueue<>(new algo1.node());
-          Queue<Node> q = new PriorityQueue<>(new Node());
-   //     HashSet<algo1.node> q = new HashSet<>();
+        Queue<Node> q = new PriorityQueue<>();
 
-//                new PriorityQueue((o1, o2) -> {
-//            algo1.node n1 = (algo1.node) o1;
-//            algo1.node n2 = (algo1.node) o2;
-//            return new Integer(n2.distance).compareTo(new Integer(n1.distance));
-//        });
         q.add(new Node(0, 0));
         while (!q.isEmpty()) {
-//            System.out.println("q size " + q.size());
             Node node = q.poll();//retrive and remove
-            if (!marked[node.source]) {
-                marked[node.source] = true;
-                ArrayList<Edge> edges = graph[node.source];
-                for (int i = 0; i < edges.size(); i++) {
-                    Edge edge = edges.get(i);
-                    int edgeDestinationDistance = distances[edge.destination];
-                    int newDistance = edge.weight + node.distance;
-                    // edgeDestinationDistance == -1  means to be infinte
-                    if (edgeDestinationDistance == -1 || edgeDestinationDistance > newDistance) {
-                        q.add(new Node(newDistance, edge.destination));
-                        distances[edge.destination] = newDistance;
-                    }
+            //      if (!marked[node.source]) {
+            //        marked[node.source] = true;
+            ArrayList<Edge> edges = graph[node.source];
+            for (int i = 0; i < edges.size(); i++) {
+                Edge edge = edges.get(i);
 
+                int edgeDestinationDistance = distances[edge.destination];
+                int newDistance = edge.weight + node.distance;
+                if (edgeDestinationDistance > newDistance) {
+                    q.add(new Node(newDistance, edge.destination));
+                    distances[edge.destination] = newDistance;
                 }
 
             }
+
+            //  }
 
         }
         return distances;
