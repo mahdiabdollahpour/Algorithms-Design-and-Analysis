@@ -7,7 +7,7 @@ import java.util.Comparator;
 /**
  * Created by ASUS on 28/01/2018.
  */
-public class ProgrammingAssignment1Question1 {
+public class ProgrammingAssignment1Question1and2 {
     static class Job {
         int w;
         int l;
@@ -57,6 +57,9 @@ public class ProgrammingAssignment1Question1 {
             public int compare(Job o1, Job o2) {
                 int s1 = o1.w - o1.l;
                 int s2 = o2.w - o2.l;
+                //      float s1 = ((float) o1.w) / (o1.l);
+                //      float s2 = ((float) o2.w) / (o2.l);
+                // for question 2
                 if (s1 > s2) {
                     return -1;
                 } else if (s1 == s2) {
