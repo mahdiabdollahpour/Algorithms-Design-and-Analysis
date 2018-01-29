@@ -92,7 +92,7 @@ public class Clustering {
 
     static int k;
 
-    static class Obj {
+    private static class Obj {
         int parent;
         int rank;
 
